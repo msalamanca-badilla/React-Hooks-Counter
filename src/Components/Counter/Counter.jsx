@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 
 export default function Counter(){
-    const [counterData, setCounterData] = useState([])
+    const [counterData, setCounterData] = useState({
+        counter: 0,
+    })
+
+
 
     return(
         <div className = 'Counter'>
-            <div></div>
+            <h1>Counter Practice</h1>
+            <div>{counterData.counter}</div>
             <hr />
-            <button>-</button>
+            <button onClick={()=>setCounterData({counter: counterData.counter -1})}>-</button>
             <button>+</button>
         </div>
     )
