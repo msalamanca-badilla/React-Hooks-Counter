@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Counter(){
+    const [counterData, setCounterData] = useState([])
+
     return(
         <div className = 'Counter'>
             <div></div>
